@@ -21,7 +21,7 @@ const Resume = () => {
             whileTap={{ scale: 0.95 }}
           >
             <a
-              href="/documents/trisha-reddy-resume.pdf"
+              href="/personal-website/documents/trisha-reddy-resume.pdf"
               download
               className="inline-flex items-center px-8 py-3 border border-transparent
                        text-base font-medium rounded-md text-white bg-blue-600

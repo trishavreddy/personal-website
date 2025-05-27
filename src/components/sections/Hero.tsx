@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Profile photo */}
           <div className="flex justify-center">
             <img
-              src="/images/trisha-profile.jpg"
+              src="/personal-website/images/trisha-profile.jpg"
               alt="Trisha Reddy"
               className="rounded-full border-2 border-white shadow-md"
               style={{ 
