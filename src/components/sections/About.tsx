@@ -17,7 +17,13 @@ const About = () => {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         {/* About Me section */}
-        <div className="mb-16">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
           <div className="prose prose-lg text-gray-600">
             <p>
@@ -43,15 +49,25 @@ const About = () => {
               web development, or anything tech-related, I'm up for the challenge!
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Skills section */}
-        <div id="skills">
+        <motion.div 
+          id="skills"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Skills & Technologies</h2>
           <div style={{ display: 'flex', gap: '2rem' }}>
-            {skills.map((skillGroup) => (
-              <div
+            {skills.map((skillGroup, index) => (
+              <motion.div
                 key={skillGroup.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 style={{
                   flex: 1,
                   border: '2px solid #9CA3AF',
@@ -78,10 +94,10 @@ const About = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
